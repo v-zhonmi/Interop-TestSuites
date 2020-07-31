@@ -76,6 +76,8 @@
     <Property name="R19704Enabled" value="true"/>
     <!-- Set R19705Enabled to true to verify that the server will return no error code for Backward Slash (\) is at the end of fileName for DeleteVersion element. Set R19705Enabled to false to disable this requirement. -->
     <Property name="R19705Enabled" value="true"/>
+    <!-- Set R19707Enabled to true to verify that the server will return no error code for Equal Sign (=) is at the end of fileName for DeleteVersion element. Set R19707Enabled to false to disable this requirement. -->
+    <Property name="R19707Enabled" value="true"/>
     <!-- Set R24902Enabled to true to verify that the server will return no error code for Forward Slash (/) is at the end of fileName for RestoreVersion element. Set R24902Enabled to false to disable this requirement. -->
     <Property name="R24902Enabled" value="true"/>
     <!-- Set R19302Enabled to true to verify that the server does not return an error to indicate that the tab (\t) character is at the end of the fileName for DeleteAllVersions. Set R19302Enabled to false to disable this requirement. -->

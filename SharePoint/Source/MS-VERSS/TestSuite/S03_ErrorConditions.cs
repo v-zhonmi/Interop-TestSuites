@@ -1059,7 +1059,7 @@ namespace Microsoft.Protocols.TestSuites.MS_VERSS
                             Site.CaptureRequirementIfIsTrue(
                                 isDeleteAllVersionWithoutDeleteAnyVersions,
                                 19302,
-                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that the tab (\t) character is at the end of the fileName. (<4> Section 3.1.4.1.2.2: The tab (\t) character is ignored at the end of the fileName.)");
+                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that the tab (\t) character is at the end of the fileName. (<4> Section 3.1.4.1.2.2: The tab (\t) character is ignored at the end of the fileName on Windows SharePoint Services 3.0, SharePoint Foundation 2010, SharePoint Foundation 2013 and SharePoint Server 2016.)");
                         }
                     }
                     else if (truncatedCharacter == "\\")
@@ -1073,7 +1073,7 @@ namespace Microsoft.Protocols.TestSuites.MS_VERSS
                             Site.CaptureRequirementIfIsTrue(
                                 isDeleteAllVersionWithoutDeleteAnyVersions,
                                 1930205,
-                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that the backward slash (\) character is at the end of the fileName. (<4> Section 3.1.4.1.2.2: The backward slash (\) character is ignored at the end of the fileName on Windows SharePoint Services 3.0, SharePoint Foundation 2010, and SharePoint Foundation 2013.)");
+                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that the backward slash (\) character is at the end of the fileName. (<4> Section 3.1.4.1.2.2: The backward slash (\) character is ignored at the end of the fileName on Windows SharePoint Services 3.0, SharePoint Foundation 2010, SharePoint Foundation 2013 and SharePoint Server 2016.)");
                         }
                     }
 
@@ -1146,7 +1146,7 @@ namespace Microsoft.Protocols.TestSuites.MS_VERSS
                                 Site.CaptureRequirementIfIsNotNull(
                                     errorString,
                                     1930213,
-                                    @"[In Appendix B: Product Behavior] Implementation does return a SOAP exception. (<4> Section 3.1.4.1.2.2:  [Windows SharePoint Services truncates all characters after the first ""#"" in the file name. ] If the truncated file name does not exist on the server, SharePoint Foundation 2010 and SharePoint Foundation 2013 returns a SOAP server exception.)");
+                                    @"[In Appendix B: Product Behavior] Implementation does return a SOAP exception. (<4> Section 3.1.4.1.2.2:  [Windows SharePoint Services truncates all characters after the first "#" in the file name. ] If the truncated file name does not exist on the server, SharePoint Foundation 2010, SharePoint Foundation 2013 and SharePoint Server 2016 returns a SOAP server exception.)");
                             }
 
                             if (Common.IsRequirementEnabled(1930203, this.Site))
@@ -1304,7 +1304,7 @@ namespace Microsoft.Protocols.TestSuites.MS_VERSS
                                 Site.CaptureRequirementIfIsNull(
                                     errorCode,
                                     1930208,
-                                    @"[In Appendix B: Product Behavior] Implementation does return a SOAP exception without an error code if fileName contains equals sign (=). (<4> Section 3.1.4.1.2.2: If fileName contains equals sign (=), SharePoint Foundation 2010 and SharePoint Foundation 2013 return a SOAP exception without an error code.)");
+                                    @"[In Appendix B: Product Behavior] Implementation does return a SOAP exception without an error code if fileName contains equals sign (=). (<4> Section 3.1.4.1.2.2: If fileName contains equals sign (=), SharePoint Foundation 2010, SharePoint Foundation 2013 and SharePoint Server 2016 return a SOAP exception without an error code.)");
                             }
                         }
                         else if (invalidCharacter == ">")
@@ -1348,7 +1348,7 @@ namespace Microsoft.Protocols.TestSuites.MS_VERSS
                                 Site.CaptureRequirementIfIsNotNull(
                                     errorString,
                                         1930214,
-                                        @"[In Appendix B: Product Behavior] Implementation does return a SOAP exception. (<4> Section 3.1.4.1.2.2:  [Windows SharePoint Services truncates all characters after the first ""?"" in the file name. ] If the truncated file name does not exist on the server, SharePoint Foundation 2010 and SharePoint Foundation 2013 returns a SOAP server exception.)");
+                                        @"[In Appendix B: Product Behavior] Implementation does return a SOAP exception. (<4> Section 3.1.4.1.2.2:  [Windows SharePoint Services truncates all characters after the first "" ? "" in the file name. ] If the truncated file name does not exist on the server, SharePoint Foundation 2010, SharePoint Foundation 2013 and SharePoint Server 2016 returns a SOAP server exception.)");
                             }
 
                             if (Common.IsRequirementEnabled(1930204, this.Site))
@@ -1678,7 +1678,7 @@ namespace Microsoft.Protocols.TestSuites.MS_VERSS
                             Site.CaptureRequirementIfIsTrue(
                                 isVersionDelete,
                                 19704,
-                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that the tab (\t) character is at the end of the fileName. (<6> Section 3.1.4.2.2.2: The tab (\t) character is ignored at the end of the fileName on Windows SharePoint Services 3.0, SharePoint Foundation 2010,and SharePoint Foundation 2013.)");
+                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that the tab (\t) character is at the end of the fileName. (<6> Section 3.1.4.2.2.2: The tab (\t) character is ignored at the end of the fileName on Windows SharePoint Services 3.0, SharePoint Foundation 2010,SharePoint Foundation 2013 and SharePoint Server 2016.)");
                         }
                     }
                     else if (truncatedCharacter == "\\")
@@ -1692,7 +1692,7 @@ namespace Microsoft.Protocols.TestSuites.MS_VERSS
                             Site.CaptureRequirementIfIsTrue(
                                 isVersionDelete,
                                 19705,
-                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that the backward slash (\) character is at the end of the fileName. (<6> Section 3.1.4.2.2.2: The backward slash (\) character is ignored at the end of the fileName on Windows SharePoint Services 3.0, SharePoint Foundation 2010, and SharePoint Foundation 2013.)");
+                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that the backward slash (\) character is at the end of the fileName. (<6> Section 3.1.4.2.2.2: The backward slash (\) character is ignored at the end of the fileName on Windows SharePoint Services 3.0, SharePoint Foundation 2010, SharePoint Foundation 2013 and SharePoint Server 2016.)");
                         }
                     }
                 }
@@ -1927,18 +1927,18 @@ namespace Microsoft.Protocols.TestSuites.MS_VERSS
                         else if (invalidCharacter == "=")
                         {
                             string sutVersion = Common.GetConfigurationPropertyValue("SutVersion", this.Site);
-                            if (sutVersion == "SharePointFoundation2013" || sutVersion == "SharePointServer2013"
-                                || sutVersion == "SharePointFoundation2010" || sutVersion == "SharePointServer2010"
-                                || sutVersion == "SharePointServer2016")
+                            if (Common.IsRequirementEnabled(19707, this.Site))
                             {
-                                Site.Assert.AreEqual<string>(
+                                // Add the debug information
+                                Site.Log.Add(LogEntryKind.Debug, "Verify MS-VERSS_R19707");
+
+                                // Verify MS-VERSS requirement: MS-VERSS_R19707
+                                Site.CaptureRequirementIfAreEqual<string>(
                                     "0x80131600",
                                     errorCode,
-                                    "{0} returns error code, the error code is {1}.",
-                                    sutVersion,
-                                    errorCode);
-                            }
-
+                                    19707,
+                                    @"In Appendix B: Product Behavior] Implementation does return error code 0x80131600 if fileName contains equals sign (=). (<6> Section 3.1.4.1.2.2: If fileName contains equals sign (=), SharePoint Foundation 2010, SharePoint Foundation 2013 and SharePoint Server 2016 return error code 0x80131600.)");
+                            } 
                             if (sutVersion == "WindowsSharePointServices3" || sutVersion == "SharePointServer2007")
                             {
                                 Site.Assert.IsNull(errorCode, "{0} does not return an error code element, the errorCode is {1}.", sutVersion, errorCode);
@@ -2347,7 +2347,7 @@ namespace Microsoft.Protocols.TestSuites.MS_VERSS
                             Site.CaptureRequirementIfIsTrue(
                                 isCurrentVersionIncreased,
                                 24902,
-                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that the forward slash (/) character is at the end of the fileName.(<10> Section 3.1.4.4.2.2: In Windows SharePoint Services 3.0, SharePoint Foundation 2010, and SharePoint Foundation 2013, the forward slash (/) character is ignored at the end of the fileName.)");
+                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that the forward slash (/) character is at the end of the fileName.(<10> Section 3.1.4.4.2.2: In Windows SharePoint Services 3.0, SharePoint Foundation 2010,SharePoint Foundation 2013 and SharePoint Server 2016, the forward slash (/) character is ignored at the end of the fileName.)");
                         }
                     }
 
@@ -2362,7 +2362,7 @@ namespace Microsoft.Protocols.TestSuites.MS_VERSS
                             Site.CaptureRequirementIfIsTrue(
                                 isCurrentVersionIncreased,
                                 24901,
-                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that two consecutive dots (..) is at the end of the fileName. (<10> Section 3.1.4.4.2.2: In Windows SharePoint Services 3.0 and SharePoint Foundation 2010, two consecutive dots (..) are ignored at the end of the fileName.)");
+                                @"[In Appendix B: Product Behavior] Implementation does not return an error to indicate that two consecutive dots (..) is at the end of the fileName. (<10> Section 3.1.4.4.2.2: In Windows SharePoint Services 3.0, SharePoint Foundation 2010, SharePoint Foundation 2013 and SharePoint Server 2016, two consecutive dots (..) are ignored at the end of the fileName.)");
                         }
 
                         if (sutVersion == "SharePointFoundation2013" || sutVersion == "SharePointServer2013")
